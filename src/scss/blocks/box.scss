@@ -1,0 +1,28 @@
+@use '../mixins/hover.scss' as *;
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 1rem;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    color: #333;
+    font-size: 3rem;
+    transition: translate .3s;
+    
+    @include hover {
+        background-color: yellowgreen;
+        translate: 30px;
+    }
+}
+
+.box-1 {
+    grid-column: 2 / 4;
+}
+
